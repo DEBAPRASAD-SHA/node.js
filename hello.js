@@ -3,4 +3,4 @@
 const math = require("./math")
 
 
-console.log("math value is ", math);
+console.log("math value is ", math.subFn(2, 5));
