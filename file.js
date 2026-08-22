@@ -1,4 +1,4 @@
 const fs = require("fs");
 
-
-fs.writeFileSync('./test.txt', 'Hey there');
+// synchronous...
+fs.writeFileSync('./test.txt', 'i am Rock');
