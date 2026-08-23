@@ -25,6 +25,5 @@ fs.appendFileSync("./test.txt", `${Date.now()}i am Rock\n`);
 
 // fs.unlinkSync("./copy.txt");
 
-console.log(fs.statSync("./test.txt"));
+console.log(fs.statSync("./test.txt") .isFile());
 
-fs.mkdirSync('my-docs');
