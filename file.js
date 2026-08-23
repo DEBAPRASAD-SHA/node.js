@@ -27,4 +27,5 @@ fs.appendFileSync("./test.txt", `${Date.now()}i am Rock\n`);
 
 console.log(fs.statSync("./test.txt") .isFile());
 
-fs.mkdirSync('my-docs');
+fs.mkdirSync('my-docss/a/b', {recursive: true});
+// fs.mkdirSync is used for creating file
