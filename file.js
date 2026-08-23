@@ -27,3 +27,4 @@ fs.appendFileSync("./test.txt", `${Date.now()}i am Rock\n`);
 
 console.log(fs.statSync("./test.txt") .isFile());
 
+fs.mkdirSync('my-docs');
