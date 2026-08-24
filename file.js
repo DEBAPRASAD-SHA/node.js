@@ -29,3 +29,5 @@ console.log(fs.statSync("./test.txt") .isFile());
 
 fs.mkdirSync('my-docss/a/b', {recursive: true});
 // fs.mkdirSync is used for creating file
+
+fs.rmdirSync('my-docss', {recursive: true});
