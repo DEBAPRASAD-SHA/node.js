@@ -1,10 +1,10 @@
 const fs = require("fs");
 
-// // synchronous...
+// // synchronous... blocking
 // fs.writeFileSync('./test.txt', 'i am Rock');
 
 
-// Asynchronous...
+// Asynchronous... non-blocking request
 // fs.writeFile('./test.txt', 'i am Rock Async', (err) => {});
 
 // const result = fs.readFileSync("./contact.txt", "utf-8");
@@ -30,5 +30,10 @@ console.log(fs.statSync("./test.txt") .isFile());
 fs.mkdirSync('my-docss/a/b', {recursive: true});
 // fs.mkdirSync is used for creating file
 
-fs.rmdirSync('my-docss', {recursive: true});
-fs.rmSync('my-docss', {recursive: true});
+// fs.rmdirSync('my-docss', {recursive: true});
+// fs.rmSync('my-docss', {recursive: true});
+
+
+// blocking....
+const result = fs.readFileSync('contact.txt', 'utf-8');
+console.log(result);
