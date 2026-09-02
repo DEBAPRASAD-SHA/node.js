@@ -33,7 +33,10 @@ fs.mkdirSync('my-docss/a/b', {recursive: true});
 // fs.rmdirSync('my-docss', {recursive: true});
 // fs.rmSync('my-docss', {recursive: true});
 
-
+console.log('1');
 // blocking....
 const result = fs.readFileSync('contact.txt', 'utf-8');
 console.log(result);
+
+console.log('2');
+
