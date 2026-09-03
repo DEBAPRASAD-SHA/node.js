@@ -33,13 +33,21 @@ fs.mkdirSync('my-docss/a/b', {recursive: true});
 // fs.rmdirSync('my-docss', {recursive: true});
 // fs.rmSync('my-docss', {recursive: true});
 
-console.log('1');
+
+const os = require ("os");
+
+console.log(os.cpus().length);
+
+// console.log('1');
 // Non-blocking....
  fs.readFile('contact.txt', 'utf-8', (err, result) =>{
-console.log(result);
+// console.log(result);
  });
 
-console.log('2');
-console.log('3');
-console.log('4');
+// console.log('2');
+// console.log('3');
+// console.log('4');
+
+// Default thread pool size = 4
+// Max? - 8core cpu - 8
 
