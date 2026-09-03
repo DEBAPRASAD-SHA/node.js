@@ -34,9 +34,7 @@ fs.mkdirSync('my-docss/a/b', {recursive: true});
 // fs.rmSync('my-docss', {recursive: true});
 
 
-const os = require ("os");
-
-console.log(os.cpus().length);
+``
 
 // console.log('1');
 // Non-blocking....
