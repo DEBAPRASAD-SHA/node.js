@@ -9,13 +9,13 @@ const myServer = http.createServer((req, res) => {
     const myUrl = url.parse(req.url);
     console.log(myUrl);
     fs.appendFile("log.txt", log, (err, data) =>{
-             
-       
-       
-       
-       
-       
-       
+              switch(myUrl.pathname){                   
+                  case '/': res.end("HomePage");        
+                  break;                                
+                  case '/about': res.end("I am gudul"); 
+                  break;                                
+                  res.end("404 Not Found");             
+              }                                         
 
     });
 });
