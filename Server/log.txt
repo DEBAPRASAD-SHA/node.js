@@ -1,8 +1,4 @@
-1793464236935: / New req recevied
-1793464238858: /favicon.ico New req recevied
-1793464380252: / New req recevied
-1793464435376: /about New req recevied
-1793464465557: /about?myname=gudul New req recevied
-1793465374538: /about New req recevied
-1793465376757: /about New req recevied
-1793465465549: /aboutq-mynameg_mara New req recevied
+
+1793553268518: GET / New req recevied
+1793553295549: GET /about New req recevied
+1793553832473: GET /signup New req recevied
