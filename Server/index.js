@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 function myHanndler(req, res) {
 }
 
-const myServer = http.createServer(myHanndler); {
+ {
    if(req.url === "/favicon.ico") return res.end();
     const log = `${Date.now()}: ${req.method} ${req.url} New req recevied\n`;
     const myUrl = url.parse(req.url);
