@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
     return res.send('Hello from Home page');
 });
 
+app.get("/about", (req, res) => {
+    return res.send("Hello from About page");
+});
+
 function myHanndler(req, res) {
 }
 
@@ -22,7 +26,7 @@ function myHanndler(req, res) {
     fs.appendFile("log.txt", log, (err, data) =>{
               switch(myUrl.pathname){                   
                   case '/':       
-            if(req.mthod==="GET") res.end("Home page");
+            if(req.method==="GET") res.end("Home page");
                   break;                                
                   case '/about': 
                   const username = myUrl.query.myname;
@@ -33,13 +37,15 @@ function myHanndler(req, res) {
                     res.end("Here are your results for" + search);
                     case '/signup':
                         if(req.method === 'GET') res.end("This is  a signup form");
-                        else is (req.methid === "POST"); {
+                        else if(req.method === "POST") {
                             res.end("Sucess");
                         }
                   default:
                     res.end("404 Not Found");
               }                                         
     });
-});
+};
+
+const myServer = http.createServer(app);
 
 myServer.listen(8000, () => console.log("server Started!"));
