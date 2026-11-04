@@ -1,4 +1,20 @@
+// version
 
-1793553268518: GET / New req recevied
-1793553295549: GET /about New req recevied
-1793553832473: GET /signup New req recevied
+5.3.0
+
+1st part -> 5
+2nd part -> 3
+3rd part-> 0
+
+// 3rd part (last part) - minor fixes (optional)
+Latest -> 5.3.2
+
+// 2nd part - Recommended Bug fix (security fix)
+Latest -> 5.4.1
+
+//1st part - major / Breaking update
+6.0.0
+
+^ - install all recommended and minor fixes automatically not major
+
+~ - this means only can update automatically the minor version not major or recommended
