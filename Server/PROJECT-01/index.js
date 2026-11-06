@@ -7,13 +7,13 @@ const PORT = 8000;
 //Routes
 
 app.get("/users", (req, res) => {
-    const html = `
+  const html = `
     <ul>
-        ${users.map(user => `<li>${user.first_name} </li>`).join('')}
+        ${users.map((user) => `<li>${user.first_name} </li>`).join("")}
     </ul>
-    `
-    res.send(html);
-})
+    `;
+  res.send(html);
+});
 
 
 app.listen(PORT, () => console.log(`server started at PORT: ${PORT}`));
