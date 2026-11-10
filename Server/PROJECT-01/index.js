@@ -7,43 +7,89 @@ const PORT = 8000;
 
 //Middleware - plugin
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
-//Routes
-app.get("/users", (req, res) => {
-  const html = `
-    <ul>
-        ${users.map((user) => `<li>${user.first_name} </li>`).join("")}
-    </ul>
-    `;
-  res.send(html);
+app.use((req, res, next) => {
+  fs.appendFile('log.txt', `\n${Date.now()}: ${req.ip}: ${req.method}: ${req.path}`, (err,data) => {
+next();
+  })
+  
 });
 
-//REST  API                                           
-
-app.get("/api/users", (req, res) => {                 
-  return res.json(users);                             
-});                                                   
-                                                      
-app                                                   
-  .route("/api/users/:id")                            
-  .get((req, res) => {                                
-    const id = Number(req.params.id);                 
-    const user = users.find((user) => user.id === id);
-    return res.json(user);                            
-  })                                                  
-  .patch((req, res) => {                              
-    // Edit the user with id                          
-    return res.json({ status: "pending" });           
-  })                                                  
-  .delete((req, res) => {                             
-    // delete the user with id                        
-    return res.json({ status: "pending" });           
-});                                                   
-                                                                                                            
-// app.get("/api/users/:id", (req, res) => {          
-// const id = Number(req.params.id);                  
-// const user = users.find((user) => user.id === id) ;
-// return res.json(user);                             
-// });                                                
-                                                                      
+  //Routes                                                                                                                                                                                                                                                                                                       
+    app.get("/users", (req, res) => {                                           
+  const html = `                                                                
+    <ul>                                                                        
+        ${users.map((user) => `<li>${user.first_name} </li>`).join("")}         
+    </ul>                                                                       
+    `;                                                                          
+  res.send(html);                                                               
+});                                                                             
+                                                                                
+                                                                                
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+{  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
