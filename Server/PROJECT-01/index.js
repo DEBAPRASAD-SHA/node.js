@@ -7,10 +7,9 @@ const PORT = 8000;
 
 //Middleware - plugin
 app.use(express.urlencoded({ extended: false }));
-
+app.use(express.json());
 
 //Routes
-
 app.get("/users", (req, res) => {
   const html = `
     <ul>
@@ -41,11 +40,10 @@ app
     // delete the user with id                        
     return res.json({ status: "pending" });           
 });                                                   
-                                                      
-                                                      
+                                                                                                            
 // app.get("/api/users/:id", (req, res) => {          
 // const id = Number(req.params.id);                  
 // const user = users.find((user) => user.id === id) ;
 // return res.json(user);                             
 // });                                                
-                                                      
+                                                                      
