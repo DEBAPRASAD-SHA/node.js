@@ -7,14 +7,18 @@ const PORT = 8000;
 
 //Middleware - plugin
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-app.use((req, res, next) => {
-  fs.appendFile('log.txt', `\n${Date.now()}: ${req.ip}: ${req.method}: ${req.path}`, (err,data) => {
-next();
-  })
-  
+app.post("/api/users", (req, res) => {
+    console.log("POST API CALLED!");
+
+    console.log(req.body);
+
+    return res.status(201).json({
+        status: "success",
+        message: "API is working"
+    });
 });
-
   //Routes                                                                                                                                                                                                                                                                                                       
     app.get("/users", (req, res) => {                                           
   const html = `                                                                
@@ -25,7 +29,4 @@ next();
   res.send(html);                                                               
 });                                                                             
                                                                                 
-                                                                                
-//REST  API                                                                     
-                                                                                
-                                                                                
+                                                                                                                                        
