@@ -28,5 +28,27 @@ app.post("/api/users", (req, res) => {
     `;                                                                          
   res.send(html);                                                               
 });                                                                             
-                                                                                
-                                                                                                                                        
+
+//REST  API                                                                     
+
+    app.get("/api/users", (req, res) => {                                                                 
+      res.setHeader("X-myName", "debaprasad"); 
+      // Always add X to custom headers                                        
+      return res.json(users);                                                        
+    });                                                                              
+
+    app                                                                              
+    .route("/api/users/:id")                                                       
+    .get((req, res) => {                                                           
+      const id = Number(req.params.id);                                            
+      const user = users.find((user) => user.id === id);                           
+      return res.json(user);                                                       
+    })                                                                             
+    .patch((req, res) => {                                                         
+      // Edit the user with id                                                     
+      return res.json({ status: "pending" });                                      
+    })                                                                             
+    .delete((req, res) => {                                                        
+       // delete the user with id                                                   
+    return res.json({ status: "pending" });                                      
+  });                                                                                                                  
