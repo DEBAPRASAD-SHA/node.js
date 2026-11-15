@@ -19,6 +19,7 @@ app.post("/api/users", (req, res) => {
         message: "API is working"
     });
 });
+
   //Routes                                                                                                                                                                                                                                                                                                       
     app.get("/users", (req, res) => {                                           
   const html = `                                                                
@@ -43,12 +44,4 @@ app.post("/api/users", (req, res) => {
       const id = Number(req.params.id);                                            
       const user = users.find((user) => user.id === id);                           
       return res.json(user);                                                       
-    })                                                                             
-    .patch((req, res) => {                                                         
-      // Edit the user with id                                                     
-      return res.json({ status: "pending" });                                      
-    })                                                                             
-    .delete((req, res) => {                                                        
-       // delete the user with id                                                   
-    return res.json({ status: "pending" });                                      
-  });                                                                                                                  
+    })                                                                            
